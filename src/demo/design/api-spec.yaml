@@ -8,27 +8,20 @@ paths:
     get:
       operationId: "getUserLocation"
       tags:
-        - Locations
-      parameters:
-        - name: userId
-          in: path
-          required: true
-          schema:
-            type: string
-            format: uuid
+        - Locations      
       responses:
         '200':
           description: Success
           content:
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/UserLocation'
+            # text/plain:
+            #   schema:
+            #     $ref: '#/components/schemas/UserLocation'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserLocation'
-            text/json:
-              schema:
-                $ref: '#/components/schemas/UserLocation'
+            # text/json:
+            #   schema:
+            #     $ref: '#/components/schemas/UserLocation'
         '401':  
           description: Unauthorized
         '403':
